@@ -1,0 +1,58 @@
+/* CSS para el fondo con gradiente */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background: linear-gradient(to right, #98ccd8, #8bd5ee); /* Gradiente de azul */
+ 
+  }
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: move-sphere1 10s infinite ease-in-out;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: move-sphere2 12s infinite ease-in-out;
+}
+
+/* Animación para mover las esferas */
+@keyframes move-sphere1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(200px, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes move-sphere2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-150px, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+  
